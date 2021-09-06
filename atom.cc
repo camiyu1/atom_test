@@ -3,6 +3,8 @@
 #include <mutex>
 #include <atomic>
 
+// If you change the following to be atomic -> normal int
+// it will be not thread-safe any more.
 std::atomic<int> a(5);
 
 void work() {
