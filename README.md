@@ -1,4 +1,4 @@
-```
+```sh
 g++ atom.cc -o atom -pthread -O3
 ```
 

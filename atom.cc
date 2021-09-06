@@ -5,8 +5,9 @@
 
 // If you change the following to be atomic -> normal int
 // it will be not thread-safe any more.
-int a = 5;
-std::atomic<int> b(0);
+// std::atomic<int> a(5);
+std::atomic<int> a(5);
+std::atomic<size_t> b(0);
 
 
 void work() {
@@ -14,11 +15,11 @@ void work() {
 }
 
 void test() {
-    b ++;
+    b++;
 }
 
 int main() {
-    while(true) {
+    while (1) {
       std::thread t1{work};
       std::thread t2{work};
       std::thread t3{test};
